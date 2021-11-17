@@ -1,0 +1,10 @@
+name: "Upload template"
+description: "Uploads a template"
+runs:
+  using: composite
+  steps:
+    - name: Upload templates
+      run: |
+        upload-localizations ./locales
+        upload-templates ./templates
+      shell: sh
